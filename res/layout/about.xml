@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+      android:background="@color/skymba_bgcolor"
+    >
+
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="58.7dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/about_us"
+            android:textColor="#272727"
+            android:textSize="26sp"
+            android:background="@drawable/page_up" />
+ <RelativeLayout
+     android:id="@+id/rela_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" 
+        android:background="@color/about_bg"
+        >
+            
+    </RelativeLayout>
+     
+    
+</LinearLayout>

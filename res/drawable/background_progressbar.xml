@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="721" >
+
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:thicknessRatio="8"
+        android:useLevel="false" >
+        <gradient
+            android:centerColor="@color/background_progressbar_center"
+            android:endColor="@color/background_progressbar_end"
+            android:startColor="@color/background_progressbar_start"
+            android:type="sweep"
+            android:useLevel="false" />
+    </shape>
+
+</rotate>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="about_bg">#2497b6</color>
+    <color name="shelf_bg">#eff3ef</color>
+    <color name="gray_need">#707070</color>
+	<color name="listview_bg">#d2d2d2</color>
+    <color name="list_divider">#ababab</color>
+    <color name="transparent_background">#00000000</color>
+    <color name="translucence_background">#50000000</color>
+    <color name="translucence_background_black">#95000000</color>
+    <color name="sync_message">#808080</color>
+    <color name="content_color">#e7e7e7</color>
+    <color name="content_color2">#1f83cd</color>
+    <color name="bar_color">#595959</color>
+    <color name="black">#000000</color>
+    <color name="black_20">#32000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="keyword_color">#008dab</color>
+    <color name="skymba_bgcolor">#f0f0f0</color>
+    <color name="grade_border">#D6D6D6</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="gray">#808080</color>
+    <color name="darkgray">#bebebe</color>
+    <color name="wiz_head_title_color">#333333</color>
+    <color name="widget_body_line">#c0c0c0</color>
+    <color name="background_welcome">#f1f3f6</color>
+    <color name="background_edit_note_update_button">#c0c0c0</color>
+    <color name="background_edit_note_edit_current_content">#FFFFFF</color>
+    <color name="background_new_note_edittext">#FFFFFF</color>
+    <color name="background_home_select_action">#c2d0dc</color>
+    <color name="head_text_tray">#3399CC</color>
+    <color name="blue_button_pressed">#8DC7E2</color>
+    <color name="head_text_separater">#B8B8B8</color>
+    <color name="background_all_notes_list">#F2F2F2</color>
+    <color name="font_color_document_title">#2D2D2C</color>
+    <color name="font_color_document_abstract">#636363</color>
+    <color name="font_color_document_info">#c7c7c7</color>
+    <color name="popup_window">#F5F5F5</color>
+    <color name="dark_gray">#6A6D71</color>
+    <color name="activity_search_bg">#E1E2E3</color>
+    <color name="activity_search_round_button_bg">#929292</color>
+    <color name="activity_search_top">#D5D5D5</color>
+    <color name="global_bg">#F0F0F0</color>
+    <color name="parting_line_gray">#E3E3E3</color>
+    <color name="parting_line_white">#FAFAFA</color>
+    <color name="background_progressbar_start">#ededed</color>
+    <color name="background_progressbar_center">#b3b3b3</color>
+    <color name="background_progressbar_end">#767676</color>
+    <color name="head_switch_bottom">#D9D9D9</color>
+    <color name="style_divide">#E5E5E5</color>
+    <color name="popup_text">#3C3C3C</color>
+    <color name="popup_stroke">#CBCBCB</color>
+    <color name="background_activity_welcome">#0B5EAD</color>
+    <color name="font_color_group_list">#707070</color>
+    <color name="background_group_list_opt">#efefef</color>
+    <!-- 2013/1/20 -->
+    <color name="list_of_tree">#EBEBEB</color>
+
+    <!-- 2013/1/20 -->
+    <color name="background_head_bar">#1f83cd</color>
+    <color name="gray_white">#8FC1E6</color>
+    <color name="global_background">#FFFFFF</color>
+    <!-- 2013/1/23 -->
+    <color name="bottom_bar">#e1e2e3</color>
+	<!-- 2013/2/4 -->
+	<color name="bottom_divider_line">#b5b5b5</color>
+	<!-- 2013/2/5 -->
+	<color name="bottom_list_bar">#f6f6f6</color>
+</resources>

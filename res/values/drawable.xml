@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="bgcolor">#C1E3FC</drawable>
+    <drawable name="background_activity_shape">#FFFFFF</drawable>
+    <drawable name="background_login_activity">#f4f4f4</drawable>
+    <drawable name="background_notelist_activity">#f0f0f0</drawable>
+
+</resources>

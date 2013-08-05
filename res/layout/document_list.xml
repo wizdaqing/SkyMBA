@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skymba_bgcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/page_up"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/catoName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#272727"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/personalCenterImg"
+            android:layout_width="38.7dp"
+            android:layout_height="38.7dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/user_login_touch"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skymba_bgcolor"
+        android:orientation="vertical" >
+
+        <com.mba.pullrefresh.PullToRefreshListView
+            android:id="@+id/listViewOfDocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/skymba_bgcolor"
+            android:overScrollMode="never"
+            android:fadingEdge="none"
+            android:background="@drawable/doc_bgimg"
+             >
+        </com.mba.pullrefresh.PullToRefreshListView>
+
+        
+    </LinearLayout>
+    <RelativeLayout
+            android:id="@+id/pBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" 
+            android:background="@drawable/doc_bgimg"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+</LinearLayout>

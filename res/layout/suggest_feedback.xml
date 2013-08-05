@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+      android:background="@color/skymba_bgcolor"
+    >
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/page_up"
+        android:orientation="vertical" 
+             >
+
+        <TextView
+            android:id="@+id/suggest_feedbackView"
+            android:text="@string/suggest_feedback" 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"      
+            android:layout_gravity="center"   
+            
+            android:textSize="22sp"
+            android:textColor="#272727"
+            />
+        
+
+    </LinearLayout>
+
+
+         
+
+         <LinearLayout
+                android:background="@color/skymba_bgcolor"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+               android:layout_marginLeft="12dp"
+             android:layout_marginRight="12dp"
+          
+              >
+
+             <LinearLayout
+                 android:background="@color/skymba_bgcolor"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical" >
+                 <LinearLayout
+                      
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical" 
+           
+             android:layout_marginBottom="14.7dp"
+             
+             >
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="44dp"
+                         android:orientation="horizontal"
+                         
+                          >
+
+                         <TextView
+                             android:id="@+id/suggest_one"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"                            
+                             android:text="@string/suggest_one"
+                             android:textColor="#272727"
+                             android:textSize="18sp" 
+                             android:layout_alignParentLeft="true"
+                             android:layout_centerVertical="true"
+                            
+                          
+                             />
+
+                         <CheckBox
+                             android:id="@+id/checkBoxSuggestOne"
+                             android:layout_width="wrap_content"
+                             android:layout_height="25.3dp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_alignParentRight="true"                           
+                             android:layout_centerVertical="true"
+                             style="@style/MyCheckBox"
+                            />
+
+                     </RelativeLayout>
+                       <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="44dp"
+                         android:orientation="horizontal"
+                          >
+
+                         <TextView
+                             android:id="@+id/suggest_two"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"                            
+                             android:text="@string/suggest_two"
+                             android:textColor="#272727"
+                             android:textSize="18sp" 
+                             android:layout_alignParentLeft="true"
+                             android:layout_centerVertical="true"
+                            
+                          
+                             />
+
+                         <CheckBox
+                             android:id="@+id/checkBoxSuggestTwo"
+                             android:layout_width="wrap_content"
+                             android:layout_height="25.3dp"
+                               android:layout_gravity="center_vertical"
+                               android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                 style="@style/MyCheckBox"
+                            />
+
+                     </RelativeLayout>
+                       <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="44dp"
+                         android:orientation="horizontal"
+                          >
+
+                         <TextView
+                             android:id="@+id/suggest_three"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"                            
+                             android:text="@string/suggest_three"
+                             android:textColor="#272727"
+                             android:textSize="18sp" 
+                             android:layout_alignParentLeft="true"
+                             android:layout_centerVertical="true"
+                            
+                          
+                             />
+
+                         <CheckBox
+                             android:id="@+id/checkBoxSuggestThree"
+                             android:layout_width="wrap_content"
+                             android:layout_height="25.3dp"
+                               android:layout_gravity="center_vertical"
+                               android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                 style="@style/MyCheckBox"
+                            />
+
+                     </RelativeLayout>
+
+                     
+         </LinearLayout>
+
+                 <EditText
+                     android:id="@+id/i_have_word_to_say"
+                     android:hint="@string/i_have_word_to_say" 
+                     android:layout_width="match_parent"
+                     android:layout_height="104.7dp"                    
+                     android:textSize="18sp"
+                     android:textColor="#999999"
+                     android:maxLines="3"
+					 android:lines="3" 
+					  android:background="@drawable/edit_text"
+                     android:paddingLeft="8dp"
+                     android:gravity="left"                   
+                     android:layout_marginBottom="15.3dp"
+                     >
+
+                 </EditText>
+
+                 <EditText
+                     android:id="@+id/phoneText"
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:hint="@string/insert_phone_number"
+                     android:textColor="#272727"
+                     android:textSize="18sp"
+                     android:layout_marginBottom="10dp"
+                     android:background="@drawable/edit_text"
+                     android:paddingLeft="8dp"
+                     android:gravity="center_vertical"
+                    
+         />
+                 
+                    <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="25.3dp" 
+                        android:layout_marginBottom="10dp"                       
+                        >
+                     <CheckBox
+                             android:id="@+id/defaultButton"
+                             android:layout_width="wrap_content"
+                             android:layout_height="25.3dp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_alignParentLeft="true"                           
+                             android:layout_centerVertical="true"
+                             android:layout_marginLeft="5dp"
+                             style="@style/MyCheckBox"
+                            />   
+                     <TextView
+                              android:layout_width="wrap_content"
+                             android:layout_height="25.3dp"
+                              android:layout_gravity="center_vertical"
+                             android:layout_centerVertical="true"
+                             android:text="@string/reg_email"
+                             android:textSize="18sp"
+                             android:textColor="#272727"
+                             android:gravity="center_vertical"
+                             android:layout_toRightOf="@+id/defaultButton"
+                         
+                         />
+                        
+                        
+                        
+                        
+                    </RelativeLayout>
+                    
+         
+
+                 <Button
+                     
+                     android:id="@+id/submit_suggest"
+                     android:layout_width="match_parent"
+                     android:layout_height="46.7dp"
+                     android:background="@drawable/suggest_touch"
+                     android:layout_gravity="center"
+                  	 android:layout_marginTop="10dp"
+                    
+                     />
+
+                 <View
+                     android:id="@+id/view1"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                      android:background="@color/skymba_bgcolor"
+                   />
+                 
+             </LinearLayout>
+
+         </LinearLayout>
+
+   
+</LinearLayout>

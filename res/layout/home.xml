@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/skymba_bgcolor"
+    >
+
+
+            <RelativeLayout
+                android:id="@+id/topHome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/page_up"
+                android:orientation="horizontal" >
+
+                
+                <ImageView
+                    android:id="@+id/BagOrLifeToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/toggle_button"
+                   android:layout_centerInParent="true"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                     />
+               
+                
+                
+                
+
+                <ImageView
+                    android:id="@+id/personalCenterImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                 
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:visibility="gone"
+                     />
+                
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/imgLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+               android:background="@color/skymba_bgcolor"
+                >
+
+                <com.mba.mygridview.MyGridView
+                    android:id="@+id/gridViewBag"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="auto_fit" 
+                   android:scrollbars="none"
+                    >
+                </com.mba.mygridview.MyGridView>
+                <com.mba.mygridview.MyGridView
+                    android:id="@+id/gridViewLife"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="auto_fit" 
+                    android:visibility="gone"
+                   android:scrollbars="none"
+                   android:listSelector="@android:color/transparent"
+                    
+                    >
+                </com.mba.mygridview.MyGridView>
+                
+
+            </LinearLayout>
+
+        </LinearLayout>
+    
+

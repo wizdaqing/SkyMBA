@@ -1,0 +1,20 @@
+﻿html body
+{
+ background:url(./doc_bgimg.jpg);
+
+
+
+
+}
+.mbatags span
+ {
+     margin-left: 5px;
+     padding: 2px 5px 2px 5px;
+     color: #008dab;
+     background-color:#fff;
+     font-size: 14px;
+     border: 1px solid #008dab;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius:5px;
+}       
