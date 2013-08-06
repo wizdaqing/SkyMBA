@@ -74,7 +74,6 @@ public class SkyMBAGridViewAdapter extends BaseAdapter {
 
 	
 	
-	
 	@Override
 	public int getItemViewType(int position) {
 		if(this.bagOrLife==1){
@@ -128,11 +127,7 @@ public class SkyMBAGridViewAdapter extends BaseAdapter {
 				view.setEnabled(false);
 				view.setVisibility(View.INVISIBLE);
 			}
-			
-			
 		}
-			
-			
 		}
 		else{
 			return convertView;
@@ -141,7 +136,5 @@ public class SkyMBAGridViewAdapter extends BaseAdapter {
 		int height=convertView.getHeight();	
 		Log.i("height", height+"");
 		return convertView;
-
 	}
-
 }

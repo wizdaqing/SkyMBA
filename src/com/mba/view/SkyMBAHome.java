@@ -1,89 +1,55 @@
 package com.mba.view;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
 import org.json.JSONObject;
-
-import cn.mba.manageactivity.SysApplication;
-import cn.wiz.sdk.WizWindow;
-import cn.wiz.sdk.api.WizEventsCenter;
-import cn.wiz.sdk.api.WizEventsCenter.WizDatabaseEventsListener;
-import cn.wiz.sdk.api.WizEventsCenter.WizDatabaseObjectType;
-import cn.wiz.sdk.api.WizEventsCenter.WizReadStausChangedListener;
-import cn.wiz.sdk.api.WizLogger;
-import cn.wiz.sdk.api.WizObject.WizObjectBase;
-import cn.wiz.sdk.api.WizStatusCenter;
-import cn.wiz.sdk.api.WizEventsCenter.WizSyncEventsListener;
-import cn.wiz.sdk.api.WizObject.WizTag;
-import cn.wiz.sdk.db.WizDatabase;
-import cn.wiz.sdk.settings.WizAccountSettings;
-import cn.wiz.sdk.settings.WizSystemSettings;
-import cn.wiz.sdk.util.WizMisc;
-
-import com.example.skymba.R;
-import com.example.skymba.R.color;
-import com.mba.account.AccountStatus;
-import com.mba.adapter.SkyMBAGridViewAdapter;
-import com.mba.mygridview.MyGridView;
-//import com.mba.slipbutton.SlipButton;
-//import com.mba.slipbutton.SlipButton.OnChangedListener;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.res.AssetManager;
-import android.database.Cursor;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.opengl.Visibility;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
+import cn.mba.manageactivity.SysApplication;
+import cn.wiz.sdk.WizWindow;
+import cn.wiz.sdk.api.WizEventsCenter;
+import cn.wiz.sdk.api.WizEventsCenter.WizDatabaseEventsListener;
+import cn.wiz.sdk.api.WizEventsCenter.WizDatabaseObjectType;
+import cn.wiz.sdk.api.WizEventsCenter.WizSyncEventsListener;
+import cn.wiz.sdk.api.WizLogger;
+import cn.wiz.sdk.api.WizStatusCenter;
+import cn.wiz.sdk.db.WizDatabase;
+import cn.wiz.sdk.settings.WizSystemSettings;
+import cn.wiz.sdk.util.WizMisc;
+
+import com.example.skymba.R;
+import com.mba.account.AccountStatus;
+import com.mba.adapter.SkyMBAGridViewAdapter;
+import com.mba.mygridview.MyGridView;
 
 @SuppressLint({ "SdCardPath", "NewApi" })
 public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDatabaseEventsListener
-//  implements OnChangedListener
   {
 	private ImageView imgToggle;
 	private ImageView personalCenter;
-	private MyGridView gridViewBag;
-	private MyGridView gridViewLife;
+	private GridView gridViewBag;
+	private GridView gridViewLife;
 	private SkyMBAGridViewAdapter adapterBag;
 	private SkyMBAGridViewAdapter adapterLife;
 	private String mKbGuid;
@@ -110,10 +76,6 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 			"4d0dca24-a720-44bd-97fe-a22c764b640a",
 			"bfa489bb-d7cd-4947-b61c-7e0892c2d19f",
 			"f544fa53-b201-4cd4-9119-115837af5071" };
-	private int[] imgResId={R.drawable.manage_press,R.drawable.venture_press,R.drawable.marketing_press,R.drawable.hr_press,
-			R.drawable.sell_press,R.drawable.financial_press,R.drawable.finance_press,
-			R.drawable.case_press,R.drawable.health_press,R.drawable.sport_press,R.drawable.wine_tasting_press};
-	
 	private String url=null;
 	private String urlMain="http://mba.trends-china.com/service.ashx?";
 	private JSONObject object;
@@ -151,15 +113,9 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 					WizStatusCenter.startAllThreads(this, SkyMBALoading.DEFAULT_USERID, SkyMBALoading.DEFAULT_PASSWORD);
 			 }
 				
-				
 		}
 		
 		addListener();
-		
-		
-		
-		
-
 	}
 	
     public void createPrefeName(){
@@ -193,11 +149,6 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 			  
 	}
 
-
-
-    
-
-	
 	public boolean isFirst(Context mContext){
 		Boolean isFirstIn = false;
 		SharedPreferences pref = mContext.getSharedPreferences("myActivityName", 0);
@@ -213,15 +164,6 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 		editor.commit();
 		
 	}
-
-	
-	
-	
-	
-	
-	
-
-	
 	
 	@Override
 	protected void onDestroy() {
@@ -231,10 +173,6 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 	}
 	// 增加退出提示
     public void getHeight(){
-    	
-            
-             
-     
     }
 	public void ini() {
 		 final float scale = this.getResources().getDisplayMetrics().density;  
@@ -243,21 +181,17 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 		int height= this.getWindowManager().getDefaultDisplay().getHeight();
 		
 		Log.i("h", topHeight+","+width+","+height);
-		gridViewBag = (MyGridView) this.findViewById(R.id.gridViewBag);
-		gridViewLife = (MyGridView) this.findViewById(R.id.gridViewLife);
+		gridViewBag = (GridView) this.findViewById(R.id.gridViewBag);
+		gridViewLife = (GridView) this.findViewById(R.id.gridViewLife);
 		personalCenter = (ImageView) this.findViewById(R.id.personalCenterImg);
 		imgToggle=(ImageView)this.findViewById(R.id.BagOrLifeToggle);
 		
-		if (AccountStatus.verifyLogin(this)) {
-			personalCenter
-					.setImageDrawable(getResources().getDrawable(R.drawable.user_login));
-		}else{
-			personalCenter
-			.setImageDrawable(getResources().getDrawable(R.drawable.user_unlogin));
+		mKbGuid = SkyMBALoading.KBGUID_BAG;
+		if (adapterBag == null) { 
+			adapterBag = new SkyMBAGridViewAdapter(this, SkyMBALoading.BAG,null);
 		}
-		  personalCenter.setVisibility(View.VISIBLE);
-		
-
+		gridViewBag.setAdapter(adapterBag);
+		gridViewBag.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		imgToggle.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -276,25 +210,21 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 				}
 			}
 		});
-			
 
-		mKbGuid = SkyMBALoading.KBGUID_BAG;
-		if (adapterBag == null) { 
-			adapterBag = new SkyMBAGridViewAdapter(this, SkyMBALoading.BAG,null);
-			
-			
-		}
 		if (adapterLife == null) {
 			adapterLife = new SkyMBAGridViewAdapter(this, SkyMBALoading.LIFE,null);
 		}
-
-
-		gridViewBag.setAdapter(adapterBag);
-		gridViewBag.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		gridViewLife.setAdapter(adapterLife);
 		gridViewLife.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		
-
+		if (AccountStatus.verifyLogin(this)) {
+			personalCenter
+					.setImageDrawable(getResources().getDrawable(R.drawable.user_login));
+		}else{
+			personalCenter
+			.setImageDrawable(getResources().getDrawable(R.drawable.user_unlogin));
+		}
+		  personalCenter.setVisibility(View.VISIBLE);
 	}
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -316,9 +246,8 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				LinearLayout shelfLay = (LinearLayout) view;
-				ImageView img=(ImageView)shelfLay.findViewById(R.id.shelf_img);
-				TextView txt=(TextView)shelfLay.findViewById(R.id.updateView);
+				ImageView img=(ImageView)view.findViewById(R.id.shelf_img);
+				TextView txt=(TextView)view.findViewById(R.id.updateView);
 				
 				int mTagSeq = Integer.parseInt(img.getTag().toString());
 				String mTagId = tagIds[mTagSeq];
@@ -336,8 +265,6 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 				intent.putExtra("mTagName", mTagName);
 				intent.putExtra("mKbGuid", mKbGuid);
 				startActivityForResult(intent, 100);//request_code=100
-				
-
 
 			}
 
@@ -471,19 +398,14 @@ public class SkyMBAHome extends Activity implements WizSyncEventsListener,WizDat
 	@Override
 	public void onSyncException(Exception e) {
 		
-		
 	}
 	
 	private Dialog getWaitDialog() {
 	
 	//挺好，无标题的进度提示可用。	
-return WizWindow.createProgressDialog(this,		
+		return WizWindow.createProgressDialog(this,		
 				R.string.loading_later, true, false);
 	}
-	
-	
-	
-	
 	
 	@Override
 	public void onDatabaseRefreshObject(WizDatabase db,

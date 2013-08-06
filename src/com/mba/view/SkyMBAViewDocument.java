@@ -62,6 +62,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.GestureDetector;
@@ -78,6 +79,7 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.LayoutAlgorithm;
+import android.webkit.WebSettings.ZoomDensity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -229,6 +231,7 @@ public class SkyMBAViewDocument extends Activity implements OnGestureListener{
 	
 
 
+	@SuppressLint("NewApi")
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) { // 按下的如果是BACK，同时没有重复
@@ -303,6 +306,7 @@ public class SkyMBAViewDocument extends Activity implements OnGestureListener{
 	};
 	private static AlertDialog alertDialog;
 
+	@SuppressLint("NewApi")
 	private void iniWebView() {
 
 		mWebView.setWebViewClient(new WizViewDocumentWebViewClient());
@@ -310,8 +314,10 @@ public class SkyMBAViewDocument extends Activity implements OnGestureListener{
 		//
 		WebSettings webSettings = mWebView.getSettings();
 		webSettings.setAllowFileAccess(true);
-		if (WizSystemSettings.isAutoAdaptsScreen(this))
+		if (WizSystemSettings.isAutoAdaptsScreen(this)) {
 			webSettings.setLayoutAlgorithm(LayoutAlgorithm.SINGLE_COLUMN);
+		} 
+			
 		
 		mWebView.addJavascriptInterface(this, "WIZSHELL");
 		mWebView.addJavascriptInterface(this, "imgOnClick");
@@ -334,8 +340,6 @@ public class SkyMBAViewDocument extends Activity implements OnGestureListener{
 		@Override
 		public void onPageStarted(WebView view, String url, Bitmap favicon) {
 			injectCss(mWebView, "file:///android_asset/mba.css");
-			
-        	
 			super.onPageStarted(view, url, favicon);
 		}
 		@Override
